@@ -1,2 +1,22 @@
 ---
 # tasks file for common
+
+- name: enable EPEL
+  dnf:
+    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    state: present
+
+- name: update system
+  dnf:
+    name: "*"
+    state: latest
+
+- name: install common tools
+  dnf:
+    name: "{{ pkg }}"
+    state: present
+  with_pkgs:
+    - vim
+    - htop
+    - curl
+    - wget
