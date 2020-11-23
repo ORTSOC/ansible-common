@@ -13,9 +13,9 @@
 
 - name: install common tools
   dnf:
-    name: "{{ pkg }}"
+    name: "{{ item }}"
     state: present
-  with_pkgs:
+  with_items:
     - vim
     - htop
     - curl
