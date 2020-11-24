@@ -13,5 +13,5 @@
 
 - name: install common tools
   dnf:
-    name: name: ["vim", "htop", "curl", "wget"]
+    name: ["vim", "htop", "curl", "wget"]
     state: present
