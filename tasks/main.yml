@@ -3,3 +3,4 @@
 
 - include: pkgs.yml
 - include: sshd.yml
+- include: ntp.yml
