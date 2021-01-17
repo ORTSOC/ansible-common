@@ -1,0 +1,16 @@
+---
+# tasks file for ntp
+
+- name: install ntp
+  apt:
+    name: ntp
+    state: present
+
+- name: install config
+  ansible.builtin.template:
+    src: ntp.conf.j2
+    dest: /etc/ntp.conf
+    owner: root
+    group: root
+    mode: "0644"
+  notify: "restart ntp"
