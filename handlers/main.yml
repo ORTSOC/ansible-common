@@ -11,4 +11,12 @@
   service:
     name: ntp
     state: restarted
+    
+# handler for metricbeat
+
+- name: restart metricbeat
+  service:
+    name: metricbeat
+    state: restarted
+    
 

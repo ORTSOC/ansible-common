@@ -1,0 +1,9 @@
+---
+  - name: install metricbeat via dpkg
+    become: yes
+    apt:
+      deb: https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.10.2-amd64.deb
+   # notify: "restart metricbeat" #move to after config stuff
+      
+# config stuff here
+# end with - notify: "restart metricbeat"
