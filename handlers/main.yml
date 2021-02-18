@@ -12,3 +12,11 @@
     name: ntp
     state: restarted
 
+- name: restart clamav
+  ansible.builtin.systemd:
+    name: ${item}
+    state: restarted
+    enabled: yes
+  with_items:
+    - clamav-daemon
+    - clamav-freshclam
