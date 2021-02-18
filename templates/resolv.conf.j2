@@ -1,5 +1,5 @@
 domain {{ domain }}
 search {{ domain }}
 {% for host in groups["dns"] %}
-nameserver {{ host }}
+nameserver {{ hostvars[host].ansible_host }}
 {% endfor %}
