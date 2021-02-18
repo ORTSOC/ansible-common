@@ -1,0 +1,5 @@
+domain {{ domain }}
+search {{ domain }}
+{% for host in groups["dns"] %}
+nameserver {{ host }}
+{% endfor %}

@@ -5,3 +5,4 @@
 - include: sshd.yml
 - include: ntp.yml
 - include: clamav.yml
+- include: dns.yml
