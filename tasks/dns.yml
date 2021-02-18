@@ -7,3 +7,4 @@
     owner: root
     group: root
     mode: 0644
+  when: "'dns' not in group_names" # don't want to set this on the dns servers, it will break things
