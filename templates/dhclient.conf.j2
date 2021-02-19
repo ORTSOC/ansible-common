@@ -8,4 +8,4 @@ request subnet-mask, broadcast-address, time-offset, routers,
         rfc3442-classless-static-routes, ntp-servers;
 
 supersede domain-name-servers {% for host in groups["dns"] %}{{ hostvars[host].ansible_host }}{% if not loop.last %},{% endif %}{% endfor %};
-supersede domain-name {{ domain }}
+supersede domain-name {{ domain }};
