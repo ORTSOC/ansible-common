@@ -7,5 +7,5 @@ request subnet-mask, broadcast-address, time-offset, routers,
         netbios-name-servers, netbios-scope, interface-mtu,
         rfc3442-classless-static-routes, ntp-servers;
 
-supersede domain-name-servers {{ ", ".join([hostvars[host].ansible_host for host in groups["dns"]]) }};
+supersede domain-name-servers {% for host in groups["dns"] %}{{ hostvars[host].ansible_host }}{% if not loop.last %},{% endif %}{% endfor %};
 supersede domain-name {{ domain }}
