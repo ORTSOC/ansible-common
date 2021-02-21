@@ -6,3 +6,4 @@
 - include: ntp.yml
 - include: clamav.yml
 - include: dns.yml
+- include: ca.yml

@@ -1,0 +1,12 @@
+
+#When we have the offical Root certificate this can be uncommented:
+
+#---
+# - name: copy root cert
+#   copy:
+#     src: rootCertificate.crt
+#     dest: /ca-stuff/         #change this to where ever is best practice. Can also copy over a script that adds cert to local/share/ or runs update-ca-certificate
+#     owner: root
+#     group: root
+#     mode: 444
+#
